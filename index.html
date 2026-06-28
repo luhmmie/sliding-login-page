@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+
+    <div class="container" id="container">
+
+        <!-- FORMS SIDE -->
+        <div class="form-container">
+
+            <div class="sign-up">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href=""><img src="./images/icons8-google-plus-50.png" alt="Google"></a>
+                    <a href=""><img src="./images/icons8-linkedin-30.png" alt="LinkedIn"></a>
+                    <a href=""><img src="./images/icons8-github-logo-30.png" alt="GitHub"></a>
+                </div>
+                <p>or use your email for registration</p>
+                <form class="form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
+
+            <div class="sign-in">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href=""><img src="./images/icons8-google-plus-50.png" alt="Google"></a>
+                    <a href=""><img src="./images/icons8-linkedin-30.png" alt="LinkedIn"></a>
+                    <a href=""><img src="./images/icons8-github-logo-30.png" alt="GitHub"></a>
+                </div>
+                <p>or use your account</p>
+                <form class="form">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <p class="forgot">Forgot your password?</p>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- OVERLAY SIDE -->
+        <div class="overlay-container">
+
+            <div class="welcome-1">
+                <h1>Welcome Back!</h1>
+                <p>Stay connected by logging in with your credentials and continue your experience</p>
+                <button id="signUpBtn">Sign Up</button>
+            </div>
+
+            <div class="welcome-2">
+                <h1>Hey There!</h1>
+                <p>Begin your incredible journey by creating an account with us today</p>
+                <button id="signInBtn">Sign In</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

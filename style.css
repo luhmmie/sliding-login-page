@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #E8E8F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 520px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* FORM SIDE */
+.form-container {
+    position: relative;
+    width: 50%;
+    background: #FFFFFF;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+}
+
+.container.active .form-container {
+    transform: translateX(100%);
+}
+
+.sign-up,
+.sign-in {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: opacity 0.6s ease;
+}
+
+.sign-up {
+    opacity: 0;
+    z-index: 1;
+}
+
+.sign-in {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* ACTIVE STATE */
+.container.active .sign-up {
+    opacity: 1;
+    z-index: 5;
+}
+
+.container.active .sign-in {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* HEADINGS */
+.sign-up h1,
+.sign-in h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 1rem;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* SMALL TEXT */
+.sign-up p,
+.sign-in p {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* FORM */
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #E0E0E0;
+    background: #F9F9F9;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.form input:focus {
+    border-color: #C026D3;
+}
+
+.forgot {
+    font-size: 12px;
+    color: #888;
+    cursor: pointer;
+    margin-top: -0.25rem;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #6B21A8, #C026D3);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.form button:hover {
+    background: linear-gradient(135deg, #C026D3, #6B21A8);
+}
+
+/* OVERLAY SIDE */
+.overlay-container {
+    position: relative;
+    width: 50%;
+    background: linear-gradient(135deg, #6B21A8, #C026D3);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+.container.active .overlay-container {
+    transform: translateX(-100%);
+}
+.welcome-1,
+.welcome-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    text-align: center;
+    transition: opacity 0.6s ease;
+    color: #FFFFFF;
+}
+
+.welcome-1 {
+    opacity: 1;
+    z-index: 2;
+}
+
+.welcome-2 {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* ACTIVE STATE FOR OVERLAY */
+.container.active .welcome-1 {
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .welcome-2 {
+    opacity: 1;
+    z-index: 2;
+}
+
+.welcome-1 h1,
+.welcome-2 h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.welcome-1 p,
+.welcome-2 p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.welcome-1 button,
+.welcome-2 button {
+    padding: 10px 28px;
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: background 0.3s ease;
+}
+
+.welcome-1 button:hover,
+.welcome-2 button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        max-width: 90%;
+        border-radius: 16px;
+    }
+
+    .form-container {
+        width: 100%;
+        min-height: 450px;
+    }
+
+    .overlay-container {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .welcome-1,
+    .welcome-2 {
+        padding: 1.5rem;
+    }
+
+    .welcome-1 h1,
+    .welcome-2 h1 {
+        font-size: 1.3rem;
+    }
+
+    .container.active .overlay-container {
+        transform: translateY(-100%);
+    }
+
+    .container.active .form-container {
+        transform: translateY(100%);
+    }
+
+    .sign-up,
+    .sign-in {
+        padding: 1.5rem;
+    }
+}
